@@ -1,0 +1,9 @@
+@use "./../variables/colors";
+a {
+    text-decoration: none;
+    color: colors.$font-color;
+
+    &:hover {
+        color: colors.$font-color-highlighted;
+    }
+}

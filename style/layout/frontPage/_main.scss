@@ -1,0 +1,29 @@
+@use "./../../elements/cards/collection";
+@use "./../../elements/text";
+main {
+    padding: 1em;
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        justify-content: space-around;
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            width: collection.$card-width;
+            gap: 120px;
+            &:first-child {
+                margin-top: calc(collection.$card-height / 4);
+            }
+            &:nth-child(even) {
+                justify-self: end;
+            }
+            &:nth-child(odd) {
+                justify-self: start;
+            }
+        }
+    }
+}

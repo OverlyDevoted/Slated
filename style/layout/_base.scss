@@ -1,6 +1,12 @@
+@use "sass:map";
+
 @use "./../variables/font";
+@use "./../variables/colors";
+@use "./../variables/breakpoints";
 @use "./../elements/gradient";
 @use "./../elements/headings";
+@use "./../elements/aLink";
+
 
 @use "./header";
 
@@ -12,12 +18,13 @@
 
 :root {
     font: font.$heading-font;
-    color: font.$font-color;
-    height: 100%;
+    color: colors.$font-color;
+    overscroll-behavior: none;
 }
 
 body {
     position: relative;
     height: 100%;
     margin:0;
+
 }

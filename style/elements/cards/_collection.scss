@@ -1,0 +1,41 @@
+@use "./../../variables/colors";
+$card-ratio: 1.3;
+$card-width: 420px;
+$card-height: $card-width * $card-ratio;
+
+.collection-card {
+    height: $card-height;
+    width: $card-width;
+    position: relative;
+    border-radius: .5em;
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    & img {
+        object-fit: cover;
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition-property: scale;
+        transition-duration: 300ms;
+
+        &.zoom {
+            scale: 1.2;
+        }
+    }
+
+    & .name-div {
+        color: colors.$main-back;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.37);
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+}

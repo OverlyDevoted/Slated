@@ -1,9 +1,56 @@
+@use "./../elements/navs";
+@use "./../variables/colors";
+@use "./../variables/breakpoints";
+
 header {
-    position:fixed;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: colors.$main-back;
     width: 100%;
-    height: 100px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    justify-items: center;
-    align-items: center;
+    border-bottom: solid 2px colors.$font-color;
+    @include navs.header;
+
+    .container {
+        
+        height: 75px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        justify-items: center;
+        align-items: center;
+
+        &>* {
+            min-width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        &>*:nth-child(2) {
+            width: 100%;
+            height: 100%;
+            border-left: solid 2px colors.$font-color;
+            border-right: solid 2px colors.$font-color;
+            justify-content: end;
+        }
+
+        &>*:last-child {
+            display: none;
+        }
+
+        @include breakpoints.breakpoint("sm") {
+            &>*:last-child {
+                display: block;
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+
+            &>*:not(:last-child, :first-child) {
+                display: none;
+            }
+
+        }
+    }
 }

@@ -1,7 +1,11 @@
 $main-back: rgb(244, 235, 226);
 $background-gradient: linear-gradient(135deg, rgba(244, 235, 226, 1) 0%, rgba(214, 210, 200, 1) 100%);
 
+$font-color: #381A13;
+$font-color-highlighted: #664f35;
+
 @mixin gradient ($main-color, $gradient) {
     background: $main-color;
     background: $gradient;
 }
+
