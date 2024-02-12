@@ -20,7 +20,7 @@ collections.forEach((collection, idx) => {
     imgContainer.alt = name + " collection hyperlink card";
     collectionEl.append(imgContainer, nameDiv);
     collectionEl.addEventListener("click", () => {
-        console.log(id);
+        window.location.assign(`./products/?category=${id}`)
     })
     collectionEl.addEventListener("pointerover", () => {
         console.log("enters")

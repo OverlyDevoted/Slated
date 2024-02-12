@@ -10,32 +10,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/pages/style.css">
 
-    <link rel="stylesheet" href="./style/pages/front/frontPage.css">
+    <link rel="stylesheet" href="./../style/pages/style.css">
+    <link rel="stylesheet" href="./../style/pages/products/productsPage.css">
 </head>
 
 <body>
     <div class="background-gradient"></div>
     <header>
         <div class="container">
-            <a href="./" class="h1">
+            <a href="/" class="h1">
                 slated
             </a>
             <nav>
                 <ul>
                     <li>
-                        <a href="./products/?category=1,2">
+                        <a href="/products/?category=1,2">
                             Clothes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=3">
+                        <a href="/products/?category=3">
                             Shoes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=4">
+                        <a href="/products/?category=4">
                             Accessories
                         </a>
                     </li>
@@ -83,17 +83,17 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./products/?category=1,2">
+                        <a href="">
                             Clothes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=3">
+                        <a href="">
                             Shoes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=4">
+                        <a href="">
                             Accessories
                         </a>
                     </li>
@@ -128,15 +128,11 @@
         </div>
     </aside>
     <main>
-        <article id="collections" class="container">
-            <div class="even">
-                <h1 style="font-weight: 200;">Experience the <span
-                        class="mark">latest</span> in business fashion</h1>
-            </div>
-            <div class="odd">
-                <h1 class="h2"><a href="./products/">Our Catalogue ></a></h1>
-            </div>
-        </article>
+        <div class="container">
+            <ul id="products-container">
+
+            </ul>
+        </div>
     </main>
     <footer>
         <div class="container row center">
@@ -144,29 +140,29 @@
                 <span class="h1">slated</span>
                 <nav>
                     <ul class="socials">
-                        <li><a href="#"><img src="./assets/icons/socials/facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/threads.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/tiktok.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/pinterest.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/facebook.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/instagram.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/threads.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/tiktok.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/youtube.svg" alt=""></a></li>
+                        <li><a href=""><img src="./../assets/icons/socials/pinterest.svg" alt=""></a></li>
                     </ul>
                 </nav>
             </section>
             <nav>
                 <ul class="grid">
-                    <li><a class="invert" href="#">About Us</a></li>
-                    <li><a class="invert" href="#">Contacts</a></li>
-                    <li><a class="invert" href="#">Shipping</a></li>
-                    <li><a class="invert" href="#">Terms & Conditions</a></li>
-                    <li><a class="invert" href="#">Privacy policy</a></li>
-                    <li><a class="invert" href="#">Cookie settings</a></li>
+                    <li><a class="invert" href="">About Us</a></li>
+                    <li><a class="invert" href="">Contacts</a></li>
+                    <li><a class="invert" href="">Shipping</a></li>
+                    <li><a class="invert" href="">Terms & Conditions</a></li>
+                    <li><a class="invert" href="">Privacy policy</a></li>
+                    <li><a class="invert" href="">Cookie settings</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
-    <script type="module" src="./js/collections.js"></script>
-    <script src="./js/burgerMenu.js"></script>
+    <script type="module" src="./../js/products.js"></script>
+    <script src="./../js/burgerMenu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,352 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.container.row {
+  display: flex;
+  flex-direction: row;
+}
+.container.center {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background-gradient {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background: #f4ebe2;
+  background: linear-gradient(135deg, rgb(244, 235, 226) 0%, rgb(214, 210, 200) 100%);
+}
+
+.h1,
+.h2,
+.h3 {
+  margin: 0;
+  font-weight: 200;
+}
+
+.h1 {
+  font-size: 2.25em;
+}
+
+.h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+.h3 {
+  font-size: 1.25em;
+}
+
+a {
+  text-decoration: none;
+  color: #381A13;
+}
+a:hover {
+  color: #664f35;
+}
+a.invert {
+  color: #f4ebe2;
+}
+a.invert:hover {
+  color: #664f35;
+  filter: brightness(200%);
+}
+
+.m-1 {
+  margin: 1em;
+}
+
+.mx-1 {
+  margin: 0 1em;
+}
+
+.my-1 {
+  margin: 1em 0;
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+.mx-2 {
+  margin: 0 2em;
+}
+
+.my-2 {
+  margin: 2em 0;
+}
+
+.m-3 {
+  margin: 3em;
+}
+
+.mx-3 {
+  margin: 0 3em;
+}
+
+.my-3 {
+  margin: 3em 0;
+}
+
+.m-4 {
+  margin: 4em;
+}
+
+.mx-4 {
+  margin: 0 4em;
+}
+
+.my-4 {
+  margin: 4em 0;
+}
+
+.m-5 {
+  margin: 5em;
+}
+
+.mx-5 {
+  margin: 0 5em;
+}
+
+.my-5 {
+  margin: 5em 0;
+}
+
+.m-6 {
+  margin: 6em;
+}
+
+.mx-6 {
+  margin: 0 6em;
+}
+
+.my-6 {
+  margin: 6em 0;
+}
+
+.m-7 {
+  margin: 7em;
+}
+
+.mx-7 {
+  margin: 0 7em;
+}
+
+.my-7 {
+  margin: 7em 0;
+}
+
+.m-8 {
+  margin: 8em;
+}
+
+.mx-8 {
+  margin: 0 8em;
+}
+
+.my-8 {
+  margin: 8em 0;
+}
+
+.m-9 {
+  margin: 9em;
+}
+
+.mx-9 {
+  margin: 0 9em;
+}
+
+.my-9 {
+  margin: 9em 0;
+}
+
+.m-10 {
+  margin: 10em;
+}
+
+.mx-10 {
+  margin: 0 10em;
+}
+
+.my-10 {
+  margin: 10em 0;
+}
+
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.burger-btn:hover {
+  cursor: pointer;
+}
+
+aside.burger-menu {
+  position: fixed;
+  display: none;
+  background-color: #381A13;
+  height: 100dvh;
+  width: 100%;
+  z-index: 1;
+  left: -100%;
+  transition-property: left;
+  transition-duration: 300ms;
+}
+aside.burger-menu nav ul {
+  font-size: 2em;
+  padding: 0;
+  margin: 1em 0 0 0;
+  list-style-type: none;
+  text-align: center;
+}
+aside.burger-menu nav:last-of-type ul {
+  display: flex;
+  justify-content: center;
+}
+aside.burger-menu nav:last-of-type ul svg {
+  scale: 3;
+  margin: 1em;
+}
+aside.burger-menu nav a {
+  color: #f4ebe2;
+}
+aside.burger-menu.active {
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  aside.burger-menu {
+    display: block;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f4ebe2;
+  width: 100%;
+  border-bottom: solid 2px #381A13;
+  text-transform: lowercase;
+}
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header ul li {
+  display: inline;
+}
+header svg {
+  scale: 1.5;
+}
+header .container {
+  height: 75px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+}
+header .container > * {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+}
+header .container > *:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  border-left: solid 2px #381A13;
+  border-right: solid 2px #381A13;
+  justify-content: end;
+}
+header .container > *:last-child {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .container > *:last-child {
+    display: block;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  header .container > *:not(:last-child, :first-child) {
+    display: none;
+  }
+}
+
+footer {
+  background-color: #381A13;
+  color: #f4ebe2;
+  padding: 2em;
+}
+@media screen and (max-width: 992px) {
+  footer {
+    padding: 2em 0;
+  }
+  footer > div.container.row {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer ul.grid {
+    grid-template-columns: 1fr;
+    row-gap: 1em;
+  }
+}
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+footer nav ul img {
+  display: block;
+  height: 30px;
+}
+footer .socials {
+  gap: 0.5em;
+}
+footer .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+*,
+::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font: 200 20px "Roboto Mono", monospace;
+  color: #381A13;
+  overscroll-behavior: none;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+header {
+  flex: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  flex: 0;
+}/*# sourceMappingURL=style.css.map */

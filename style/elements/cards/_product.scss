@@ -1,0 +1,51 @@
+@use "./../../variables/colors";
+$card-width: 300px;
+
+.product-card {
+    max-width: $card-width;
+    display: grid;
+    grid-template-rows: $card-width, 1fr;
+    border-bottom: solid 2px colors.$font-color;
+    align-items: start;
+
+    &>.image-container {
+        width: $card-width;
+        height: $card-width;
+        overflow: hidden;
+
+        img {
+            transition-property: scale;
+            transition-duration: 300ms;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+            &.zoom {
+                scale: 1.2;
+            }
+        }
+    }
+
+    &>.info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5em 0;
+        & span {
+            &:first-of-type {
+                max-width: 70%;
+                text-align: left;
+            }
+
+            &:last-of-type {
+                max-width: 30%;
+                text-align: right;
+
+                &::after {
+                    content: "€";
+                }
+            }
+        }
+
+    }
+}

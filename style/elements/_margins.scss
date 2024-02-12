@@ -1,0 +1,11 @@
+@for $i from 1 through 10 {
+    .m-#{$i} {
+        margin: #{$i}em;
+    }
+    .mx-#{$i} {
+        margin: 0 #{$i}em;
+    }
+    .my-#{$i} {
+        margin: #{$i}em 0;
+    }
+}

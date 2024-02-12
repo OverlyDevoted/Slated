@@ -1,0 +1,49 @@
+@use "./../variables/colors";
+@use "./../variables/breakpoints";
+
+footer {
+    background-color: colors.$font-color;
+    color: colors.$main-back;
+    padding: 2em;
+
+    @include breakpoints.breakpoint("lg") {
+        padding: 2em 0;
+
+        &>div.container.row {
+            flex-direction: column;
+            text-align: center;
+            gap: 2em;
+        }
+
+    }
+
+    @include breakpoints.breakpoint("md") {
+        & ul.grid {
+            grid-template-columns: 1fr;
+            row-gap: 1em;
+        }
+    }
+
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+
+            img {
+                display: block;
+                height: 30px;
+            }
+        }
+    }
+
+    & .socials {
+        gap: 0.5em
+    }
+
+    & .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

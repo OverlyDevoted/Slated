@@ -40,7 +40,7 @@ header {
             display: none;
         }
 
-        @include breakpoints.breakpoint("sm") {
+        @include breakpoints.breakpoint("md") {
             &>*:last-child {
                 display: block;
                 grid-column-start: 3;

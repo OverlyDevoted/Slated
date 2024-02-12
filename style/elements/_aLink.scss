@@ -2,8 +2,15 @@
 a {
     text-decoration: none;
     color: colors.$font-color;
-
+    
     &:hover {
         color: colors.$font-color-highlighted;
+    }
+    &.invert {
+        color: colors.$main-back;
+        &:hover {
+            color: colors.$font-color-highlighted;
+            filter: brightness(200%);
+        }
     }
 }

@@ -6,9 +6,12 @@
 @use "./../elements/gradient";
 @use "./../elements/headings";
 @use "./../elements/aLink";
+@use "./../elements/margins";
+@use "./../elements/burger";
 
 
 @use "./header";
+@use "./footer";
 
 *,
 ::before,
@@ -20,11 +23,22 @@
     font: font.$heading-font;
     color: colors.$font-color;
     overscroll-behavior: none;
+    height: 100%;
 }
 
 body {
     position: relative;
-    height: 100%;
     margin:0;
-
+}
+header {
+    flex:0;
+}
+main {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    flex:0;
 }

@@ -1,4 +1,5 @@
 @use "./../../variables/colors";
+@use "./../../variables/breakpoints";
 $card-ratio: 1.3;
 $card-width: 420px;
 $card-height: $card-width * $card-ratio;
@@ -9,6 +10,14 @@ $card-height: $card-width * $card-ratio;
     position: relative;
     border-radius: .5em;
     overflow: hidden;
+    transition-property: width, heigth;
+    transition-duration: 500ms;
+
+    @include breakpoints.breakpoint("lg") {
+        width: 320px;
+        height: calc(320px * 1.3);
+
+    }
 
     &:hover {
         cursor: pointer;

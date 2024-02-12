@@ -1,0 +1,61 @@
+@use "./../variables/breakpoints";
+@use "./../variables/colors";
+
+
+.burger-btn {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+aside.burger-menu {
+    position: fixed;
+    display: none;
+    background-color: colors.$font-color;
+
+    height: 100dvh;
+    width: 100%;
+    z-index: 1;
+    left: -100%;
+    transition-property: left;
+    transition-duration: 300ms;
+
+    nav {
+        ul {
+            font-size: 2em;
+            padding: 0;
+            margin: 1em 0 0 0;
+
+            list-style-type: none;
+            text-align: center;
+        }
+
+        &:last-of-type {
+            ul {
+                display: flex;
+                justify-content: center;
+
+                svg {
+                    scale: 3;
+                    margin: 1em;
+                }
+            }
+        }
+
+        a {
+            color: colors.$main-back;
+        }
+    }
+
+    &.active {
+        left: 0;
+    }
+
+    @include breakpoints.breakpoint("md") {
+        display: block;
+    }
+}
