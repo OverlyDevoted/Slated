@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slated</title>
+
+    <!-- Base -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../../style/pages/style.css">
+    <link rel="stylesheet" href="./../../style/pages/view/viewPage.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+    <header>
+        <div class="container">
+            <a href="./../../" class="h1">
+                slated
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./../../products/?category=1,2">
+                            Clothes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../../products/?category=3">
+                            Shoes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../../products/?category=4">
+                            Accessories
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="cart" href="./../../cart/">
+                            <svg class="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24"
+                                width="28" fill="currentColor">
+                                <path
+                                    d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./user">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="28"
+                                fill="currentColor">
+                                <path
+                                    d="M3.534 10.07a1 1 0 1 1 .733 1.86A3.579 3.579 0 0 0 2 15.26V17a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1.647a3.658 3.658 0 0 0-2.356-3.419 1 1 0 1 1 .712-1.868A5.658 5.658 0 0 1 14 15.353V17a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3v-1.74a5.579 5.579 0 0 1 3.534-5.19zM7 0a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V4a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v2a2 2 0 1 0 4 0V4a2 2 0 0 0-2-2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div style="text-align: center;">
+                <button id="burger-btn" class="burger-btn" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" width="28" fill="currentColor">
+                        <path
+                            d="M1 0h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 8h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0-4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <aside id="burger-menu" class="burger-menu">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./../../products/?category=1,2">
+                            Clothes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../../products/?category=3">
+                            Shoes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../../products/?category=4">
+                            Accessories
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="cart" href="./../../cart/">
+                            <svg class="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24"
+                                width="28" fill="currentColor">
+                                <path
+                                    d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./user">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="28"
+                                fill="currentColor">
+                                <path
+                                    d="M3.534 10.07a1 1 0 1 1 .733 1.86A3.579 3.579 0 0 0 2 15.26V17a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1.647a3.658 3.658 0 0 0-2.356-3.419 1 1 0 1 1 .712-1.868A5.658 5.658 0 0 1 14 15.353V17a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3v-1.74a5.579 5.579 0 0 1 3.534-5.19zM7 0a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V4a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v2a2 2 0 1 0 4 0V4a2 2 0 0 0-2-2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <article id="product-article" class="container product-article">
+            <section id="image-container">
+                <img src="" alt="">
+            </section>
+            <section id="info-container" class="info-container">
+                <h1 class="h2" id="product-name">Product Name</h1>
+                <div id="product-description"></div>
+                <div id="product-price"> </div>
+                <div>
+                    <form id="purchase-options-form" action="submit">
+                        <div>
+                            <label for="size">Size:</label>
+                            <select name="size" id="size"></select>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity:</label>
+                            <select name="quantity" id="quantity"></select>
+                        </div>
+                        <button id="submit-btn" type="submit">Add to Cart</button>
+                    </form>
+                    <div id="product-error" class="error"></div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <div class="container row center">
+            <section>
+                <span class="h1">slated</span>
+                <nav>
+                    <ul class="socials">
+                        <li><a href="#"><img src="./../../assets/icons/socials/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../../assets/icons/socials/instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../../assets/icons/socials/threads.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../../assets/icons/socials/tiktok.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../../assets/icons/socials/youtube.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../../assets/icons/socials/pinterest.svg" alt=""></a></li>
+                    </ul>
+                </nav>
+            </section>
+            <nav>
+                <ul class="grid">
+                    <li><a class="invert" href="#">About Us</a></li>
+                    <li><a class="invert" href="#">Contacts</a></li>
+                    <li><a class="invert" href="#">Shipping</a></li>
+                    <li><a class="invert" href="#">Terms & Conditions</a></li>
+                    <li><a class="invert" href="#">Privacy policy</a></li>
+                    <li><a class="invert" href="#">Cookie settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script type="module" src="./../../js/productViewLoader.js"></script>
+    <script src="./../../js/burgerMenu.js"></script>
+    <script type="module" src="./../../js/cartManager.js"></script>
+
+</body>
+
+</html>

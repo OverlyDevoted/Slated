@@ -1,0 +1,39 @@
+.product-article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em 0;
+}
+.product-article img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.product-article section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-article form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px #381A13;
+  padding-left: 0.5em;
+}
+.product-article form button {
+  background-color: #381A13;
+  color: #f4ebe2;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5em 1em;
+}
+.product-article form button:hover {
+  background-color: #582d24;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 0.25em;
+  height: 1em;
+}/*# sourceMappingURL=viewPage.css.map */

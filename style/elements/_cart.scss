@@ -1,0 +1,17 @@
+@use "./../variables/colors";
+.cart {
+    position: relative;
+    .cart-counter {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -20px;
+        right: 0;
+        background-color: colors.$font-color;
+        color: colors.$main-back;
+        height: 25px;
+        width: 25px;
+        border-radius: 100%;
+    }
+}

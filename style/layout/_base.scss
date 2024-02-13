@@ -8,7 +8,7 @@
 @use "./../elements/aLink";
 @use "./../elements/margins";
 @use "./../elements/burger";
-
+@use "./../elements/cart";
 
 @use "./header";
 @use "./footer";
@@ -29,6 +29,7 @@
 body {
     position: relative;
     margin:0;
+    min-height: 100dvh;
 }
 header {
     flex:0;

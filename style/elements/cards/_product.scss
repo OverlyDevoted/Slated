@@ -7,7 +7,9 @@ $card-width: 300px;
     grid-template-rows: $card-width, 1fr;
     border-bottom: solid 2px colors.$font-color;
     align-items: start;
-
+    &:hover {
+        cursor: pointer;
+    }
     &>.image-container {
         width: $card-width;
         height: $card-width;

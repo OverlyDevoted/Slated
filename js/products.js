@@ -20,6 +20,12 @@ const loadProducts = (...args) => {
 const generateProductCard = (product) => {
     const li = document.createElement("li");
     li.classList.add("product-card");
+    li.addEventListener("click", (e) => {
+        const a = document.createElement("a");
+        a.href = `./view/?product=${product.id}&collection=${product.collectionId}`;
+        a.click();
+    })
+
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("image-container");
     const img = document.createElement("img");
