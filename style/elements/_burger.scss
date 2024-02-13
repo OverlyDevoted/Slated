@@ -2,13 +2,16 @@
 @use "./../variables/colors";
 
 
-.burger-btn {
+button.burger-btn {
     background-color: transparent;
+    color: colors.$font-color;
     border: none;
     width: fit-content;
-
+    
     &:hover {
         cursor: pointer;
+        background-color: transparent;
+        color: #8f5141;
     }
 }
 

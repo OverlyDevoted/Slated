@@ -1,0 +1,21 @@
+@use "./../variables/colors";
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    td, th {
+        border-bottom: solid 2px colors.$font-color;
+        text-align: center;
+    }
+    td {
+        padding: 1em;
+        height: 100px;
+    }
+     
+    
+    img {
+        display: block;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+    }
+}

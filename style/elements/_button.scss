@@ -1,0 +1,13 @@
+@use "./../variables/colors";
+button {
+    background-color: colors.$font-color;
+    color: colors.$main-back;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5em 1em;
+
+    &:hover {
+        background-color: #582d24;
+        cursor: pointer;
+    }
+}

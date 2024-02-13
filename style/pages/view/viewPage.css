@@ -21,17 +21,6 @@
   border: solid 2px #381A13;
   padding-left: 0.5em;
 }
-.product-article form button {
-  background-color: #381A13;
-  color: #f4ebe2;
-  font-size: 1rem;
-  border: none;
-  padding: 0.5em 1em;
-}
-.product-article form button:hover {
-  background-color: #582d24;
-  cursor: pointer;
-}
 
 .error {
   margin-top: 0.25em;

@@ -27,7 +27,7 @@ const setError = (message) => {
 if (ids) {
     console.log(ids);
     const sizes = ["S", "M", "L", "XL", "XLL"]
-    const data = await getData("https://65c5cde5e5b94dfca2e05138.mockapi.io/api/", "GET", "collection", ids.collection, "product", ids.product)
+    const data = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${ids.collection}/product/${ids.product}`, "GET", null)
     console.log(data)
     const img = document.querySelector("#image-container > img");
     img.src = data.imageUrl;
@@ -100,7 +100,7 @@ if (ids) {
     purchaseForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const cartItem = { ...ids, size: sizeSelector.value, count: countSelector.value }
+        const cartItem = { ...ids, size: sizeSelector.value, count: countSelector.value, imageUrl: data.imageUrl, name: data.name, price: data.price, fullCount: data.count };
         if (cartItem.count > 0) {
 
             let cartData = JSON.parse(localStorage.getItem("cart"));

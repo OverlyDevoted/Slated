@@ -1,0 +1,28 @@
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+table td, table th {
+  border-bottom: solid 2px #381A13;
+  text-align: center;
+}
+table td {
+  padding: 1em;
+  height: 100px;
+}
+table img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4em;
+  gap: 2em;
+}/*# sourceMappingURL=cartPage.css.map */
