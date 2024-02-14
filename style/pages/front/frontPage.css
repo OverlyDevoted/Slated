@@ -58,6 +58,10 @@
   text-decoration: underline;
 }
 
+.text-center {
+  text-align: center;
+}
+
 main {
   padding: 1em;
 }

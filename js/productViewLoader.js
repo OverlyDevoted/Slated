@@ -1,6 +1,7 @@
 import { updateCounters } from "./cartManager.js";
 import { getData } from "./dataFetcher.js";
 
+const maxOptions = 10;
 
 const getIds = () => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -10,12 +11,13 @@ const getIds = () => {
     const collectionId = searchParams.get("collection");
     if (!collectionId || !/^\d{1,3}$/.test(collectionId)) return null;
     return { collection: collectionId, product: productId };
-
 }
 
 const ids = getIds();
+
 let errorTimeout;
 const errorDiv = document.getElementById("product-error");
+
 //technically not only errors can be displayed 
 const setError = (message) => {
     errorDiv.textContent = message;
@@ -24,9 +26,11 @@ const setError = (message) => {
         errorDiv.textContent = "";
     }, 10000);
 }
+
 if (ids) {
     console.log(ids);
-    const sizes = ["S", "M", "L", "XL", "XLL"]
+    const collectionData = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${ids.collection}`);
+    const sizes = collectionData.sizes;
     const data = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${ids.collection}/product/${ids.product}`, "GET", null)
     console.log(data)
     const img = document.querySelector("#image-container > img");
@@ -56,7 +60,7 @@ if (ids) {
         countSelector.append(option);
     }
     const setOption = (id) => {
-        for (let i = 0; i < data.count[id]; i++) {
+        for (let i = 0; i < Math.min(data.count[id],maxOptions); i++) {
             const option = document.createElement("option");
             option.setAttribute("value", i + 1);
             option.textContent = i + 1;

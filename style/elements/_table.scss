@@ -1,17 +1,40 @@
 @use "./../variables/colors";
+@use "./../variables/breakpoints";
+
 table {
     margin: 0 auto;
     border-collapse: collapse;
-    td, th {
+
+    @include breakpoints.breakpoint("md") {
+        margin: 1em 0;
+
+        tr {
+
+            td {
+                padding: .25em;
+            }
+
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
+
+    td,
+    th {
         border-bottom: solid 2px colors.$font-color;
         text-align: center;
     }
+
     td {
+
+
         padding: 1em;
         height: 100px;
     }
-     
-    
+
+
     img {
         display: block;
         height: 100px;

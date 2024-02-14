@@ -1,7 +1,11 @@
 @use "./../../elements/table";
+@use "./../../variables/breakpoints";
 
 .container {
-    & > div {
+    & > div:last-of-type {
+        @include breakpoints.breakpoint("lg") {
+            margin:0;
+        }
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -15,11 +15,11 @@ const purchase = async () => {
         const putRes = await Promise.all(putPromises);
         localStorage.removeItem("cart");
         cartContainer.innerHTML = "Successful purchase"
-        // setTimeout(() => {
-        //     const aBack = document.createElement("a")
-        //     aBack.href = "./../";
-        //     aBack.click();
-        // }, 3000);
+        setTimeout(() => {
+            const aBack = document.createElement("a")
+            aBack.href = "./../";
+            aBack.click();
+        }, 3000);
 
         console.log(putRes)
         
@@ -46,7 +46,7 @@ const setupPage = () => {
     cartContainer.innerHTML =
         "<div class='loader'></div>" +
         "<div>" +
-        "<table id='cart-table'>" +
+        "<table id='cart-table' class='mt-4'>" +
         "<thead><tr>" +
         "<th>Image</th>" +
         "<th>Name</th>" +

@@ -1,8 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.container.row {
+  display: flex;
+  flex-direction: row;
+}
+.container.center {
+  justify-content: space-between;
+  align-items: center;
+}
+
 table {
   margin: 0 auto;
   border-collapse: collapse;
 }
-table td, table th {
+@media screen and (max-width: 768px) {
+  table {
+    margin: 1em 0;
+  }
+  table tr td {
+    padding: 0.25em;
+  }
+  table tr img {
+    width: 75px;
+    height: 75px;
+  }
+}
+table td,
+table th {
   border-bottom: solid 2px #381A13;
   text-align: center;
 }
@@ -18,11 +45,16 @@ table img {
      object-fit: cover;
 }
 
-.container > div {
+.container > div:last-of-type {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 4em;
   gap: 2em;
+}
+@media screen and (max-width: 992px) {
+  .container > div:last-of-type {
+    margin: 0;
+  }
 }/*# sourceMappingURL=cartPage.css.map */

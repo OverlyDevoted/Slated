@@ -2,10 +2,34 @@
     .m-#{$i} {
         margin: #{$i}em;
     }
+
     .mx-#{$i} {
         margin: 0 #{$i}em;
     }
+
     .my-#{$i} {
         margin: #{$i}em 0;
     }
+
+    .mt-#{$i} {
+        margin-top: #{$i}em;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}em;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i}em;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i}em;
+    }
+}
+.my-025 {
+    margin: 0.25em 0;
+}
+.mx-auto {
+    margin: 0 auto;
 }

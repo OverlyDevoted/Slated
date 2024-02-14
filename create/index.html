@@ -10,32 +10,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/pages/style.css">
 
-    <link rel="stylesheet" href="./style/pages/front/frontPage.css">
+    <link rel="stylesheet" href="./../style/pages/style.css">
+    <link rel="stylesheet" href="./../style/pages/create/createPage.css">
+
 </head>
 
 <body>
     <div class="background-gradient"></div>
     <header>
         <div class="container">
-            <a href="./" class="h1">
+            <a href="./../" class="h1">
                 slated
             </a>
             <nav>
                 <ul>
                     <li>
-                        <a href="./products/?category=1,2">
+                        <a href="./../products/?category=1,2">
                             Clothes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=3">
+                        <a href="./../products/?category=3">
                             Shoes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=4">
+                        <a href="./../products/?category=4">
                             Accessories
                         </a>
                     </li>
@@ -45,7 +46,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="cart" href="./cart/">
+                        <a class="cart" href="./../cart/">
                             <svg class="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24"
                                 width="28" fill="currentColor">
                                 <path
@@ -55,7 +56,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./create/">
+                        <a href="./">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="28"
                                 fill="currentColor">
@@ -83,17 +84,17 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./products/?category=1,2">
+                        <a href="./../products/?category=1,2">
                             Clothes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=3">
+                        <a href="./../products/?category=3">
                             Shoes
                         </a>
                     </li>
                     <li>
-                        <a href="./products/?category=4">
+                        <a href="./../products/?category=4">
                             Accessories
                         </a>
                     </li>
@@ -103,7 +104,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="cart" href="./cart/">
+                        <a class="cart" href="./../cart/">
                             <svg class="shopping-cart" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24"
                                 width="28" fill="currentColor">
                                 <path
@@ -113,7 +114,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./create/">
+                        <a href="./">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="28"
                                 fill="currentColor">
@@ -128,14 +129,43 @@
         </div>
     </aside>
     <main>
-        <article id="collections" class="container">
-            <div class="even">
-                <h1 style="font-weight: 200;">Experience the <span class="mark">latest</span> in business fashion</h1>
+        <div id="" class="container">
+            <div class="mt-2">
+
+                <h1 class="h2 mb-1 text-center">
+                    Create new item for the store
+                </h1>
+                <form id="clothing-form" class="create-form mt-4 mx-auto" action="submit">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div>
+                        <label for="image">Image URL</label>
+                        <input type="url" name="imageUrl" id="imageUrl" required>
+                    </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" name="price" id="price" step="0.01" min="0.99" max="999.99" required>
+                    </div>
+                    <div>
+                        <label for="collection">Collection</label>
+                        <select name="collection" id="collection" required></select>
+                    </div>
+                    <!-- <label for="size">Size</label>
+                        <select name="size" id="size" required></select>
+                        <label for="count">Count</label>
+                        <input type="number" name="count" id="count" required> -->
+                    <div id="sizes"></div>
+                    <button type="submit">Create</button>
+                </form>
+                <div id="notification" class="h2 notification"></div>
             </div>
-            <div class="odd">
-                <h1 class="h2"><a href="./products/">Our Catalogue ></a></h1>
-            </div>
-        </article>
+        </div>
     </main>
     <footer>
         <div class="container row center">
@@ -143,12 +173,12 @@
                 <span class="h1">slated</span>
                 <nav>
                     <ul class="socials">
-                        <li><a href="#"><img src="./assets/icons/socials/facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/threads.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/tiktok.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/youtube.svg" alt=""></a></li>
-                        <li><a href="#"><img src="./assets/icons/socials/pinterest.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/threads.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/tiktok.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/youtube.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./../assets/icons/socials/pinterest.svg" alt=""></a></li>
                     </ul>
                 </nav>
             </section>
@@ -164,9 +194,9 @@
             </nav>
         </div>
     </footer>
-    <script type="module" src="./js/collections.js"></script>
-    <script src="./js/burgerMenu.js"></script>
-    <script type="module" src="./js/cartManager.js"></script>
+    <script src="./../js/burgerMenu.js"></script>
+    <script type="module" src="./../js/cartManager.js"></script>
+    <script type="module" src="./../js/createManager.js"></script>
 </body>
 
 </html>

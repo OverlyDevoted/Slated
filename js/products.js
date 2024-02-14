@@ -45,7 +45,8 @@ const generateProductCard = (product) => {
 
     const priceSpan = document.createElement("span");
     priceSpan.textContent = product.price;
-
+    priceSpan.classList.add("price")
+    
     infoContainer.append(nameSpan, priceSpan);
     li.append(imgContainer, infoContainer);
     return li;

@@ -1,0 +1,101 @@
+@use "./../variables/colors";
+@use "./../variables/breakpoints";
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+    textarea {
+        resize: none;
+    }
+
+    textarea,
+    input,
+    select {
+        font-size: 1rem;
+        background-color: colors.$font-color-highlighted;
+        color: colors.$main-back;
+        border: none;
+        &:focus {
+            outline: solid 2px colors.$font-color;
+        }
+    }
+}
+
+.create-form {
+    gap: 1em;
+    max-width: 700px;
+    border: solid 2px colors.$font-color;
+    @include breakpoints.breakpoint("md"){
+        border-left:none;
+        border-right:none;
+        
+    }
+    button {
+        background-color: colors.$font-color-highlighted;
+        color: colors.$main-back;
+        &:hover {
+            background-color: colors.$font-color;
+            cursor: pointer;
+        }
+    }
+    &>div {
+        display: flex;
+        flex-direction: column;
+
+        &:last-of-type {
+            &>div {
+                display: flex;
+                justify-content: space-between;
+                input {
+                    @include breakpoints.breakpoint("md"){
+                        max-width: 8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.purchase-form {
+    flex-direction: row;
+
+
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px colors.$font-color;
+    padding-left: .5em;
+
+    @include breakpoints.breakpoint("sm") {
+        padding-left: 0em;
+        flex-direction: column;
+
+        &>div {
+            padding: .5em;
+
+            &>*,
+            &>select {
+
+                display: block;
+
+                width: 100%;
+            }
+        }
+    }
+
+    select {
+        font-size: 1em;
+        background-color: colors.$font-color;
+        color: colors.$main-back;
+        width: 3em;
+        height: 100%;
+        border: none;
+        outline: transparent;
+
+        &:hover {
+            background-color: #582d24;
+            cursor: pointer;
+        }
+    }
+}
