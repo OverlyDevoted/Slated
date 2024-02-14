@@ -22,7 +22,7 @@ const purchase = async () => {
         }, 3000);
 
         console.log(putRes)
-        
+
         for (let item of putRes) {
             const count = item.count.reduce((accum, cur) => accum + Math.max(cur, 0), 0)
             if (count <= 0) {
@@ -50,6 +50,7 @@ const setupPage = () => {
         "<thead><tr>" +
         "<th>Image</th>" +
         "<th>Name</th>" +
+        "<th>Size</th>" +
         "<th>Count</th>" +
         "<th>Price</th>" +
         "</tr></thead>" +
@@ -76,13 +77,16 @@ const setupPage = () => {
         const nameTd = document.createElement("td");
         nameTd.textContent = item.name;
 
+        const sizeTd = document.createElement("td");
+        sizeTd.textContent = item.sizeName;
+
         const countTd = document.createElement("td");
         countTd.textContent = item.count;
 
         const priceTd = document.createElement("td");
-        priceTd.textContent = +item.count * +item.price;
+        priceTd.textContent = (+item.count * +item.price).toFixed(2);
 
-        tr.append(imgTd, nameTd, countTd, priceTd);
+        tr.append(imgTd, nameTd, sizeTd, countTd, priceTd);
         return tr;
     }
 

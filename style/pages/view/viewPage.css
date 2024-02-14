@@ -106,9 +106,10 @@ form select:focus {
   display: flex;
   justify-content: space-between;
   border: solid 2px #381A13;
+  padding: 0;
   padding-left: 0.5em;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .purchase-form {
     padding-left: 0em;
     flex-direction: column;

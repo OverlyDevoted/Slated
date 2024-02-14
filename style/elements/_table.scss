@@ -4,7 +4,7 @@
 table {
     margin: 0 auto;
     border-collapse: collapse;
-
+    width: 100%;
     @include breakpoints.breakpoint("md") {
         margin: 1em 0;
 

@@ -104,7 +104,7 @@ if (ids) {
     purchaseForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const cartItem = { ...ids, size: sizeSelector.value, count: countSelector.value, imageUrl: data.imageUrl, name: data.name, price: data.price, fullCount: data.count };
+        const cartItem = { ...ids, size: sizeSelector.value, count: countSelector.value, imageUrl: data.imageUrl, name: data.name, price: data.price, fullCount: data.count, sizeName: sizeSelector.options[sizeSelector.value].text };
         if (cartItem.count > 0) {
 
             let cartData = JSON.parse(localStorage.getItem("cart"));

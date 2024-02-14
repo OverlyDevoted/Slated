@@ -65,15 +65,15 @@ form {
     display: flex;
     justify-content: space-between;
     border: solid 2px colors.$font-color;
+    padding: 0;
     padding-left: .5em;
 
-    @include breakpoints.breakpoint("sm") {
+    @include breakpoints.breakpoint("md") {
         padding-left: 0em;
         flex-direction: column;
 
         &>div {
             padding: .5em;
-
             &>*,
             &>select {
 
