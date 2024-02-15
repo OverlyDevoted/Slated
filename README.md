@@ -31,7 +31,39 @@ Although, the application was built with resilience in mind, it's still fully co
 
 On every page load data is fetched from the backend API. This slows down application responsiveness. One shortcoming is the absence of loading screens. Loading screens would be a more elegant solution, than having and empty screen. Implementing loading screens is not difficult in itself, but the need for them was conceived way too late into the development and it would be a pricey refactor to implement loading in all of the pages.
 
-3. Can't buy multiple sizes of the same product.
+3. Can't buy multiple sizes of the same product
+
+4. Can't host on Github pages
+
+Because I'm using an API, which I don't have control over. Endpoints could be extrapolated and used to upload arbitrary data without client-side sanitation and validation, which could lead to uploading malicious code. Even though, I tried to follow best practices for avoiding XSS, there's still a chance I could've slipped up somewhere. So to avoid users to being exposed to potentially malicious software, I chose to not host it.  
+
+## Download and install
+
+1. Clone the repository into your local environment
+2. Host files on a server
+
+### Python
+
+Run this command in a shell to open a server for hosting files
+
+`python3 -m http.server 8000`
+
+### Live server extension
+
+Serve with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for Visual Studio Code
+
+### Bundlers
+
+Download [Parcel](https://parceljs.org/) or [Vite](https://vitejs.dev/) and follow docs for instructions on how to launch a server
+
+### Backend server
+
+Currently popular backend server frameworks:
+
+- [Express](https://expressjs.com/)
+- [GO](https://go.dev/)
+- [Django](https://docs.djangoproject.com/en/5.0/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ## Images
 
