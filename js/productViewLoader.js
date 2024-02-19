@@ -28,11 +28,10 @@ const setError = (message) => {
 }
 
 if (ids) {
-    console.log(ids);
     const collectionData = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${ids.collection}`);
     const sizes = collectionData.sizes;
     const data = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${ids.collection}/product/${ids.product}`, "GET", null)
-    console.log(data)
+    
     const img = document.querySelector("#image-container > img");
     img.src = data.imageUrl;
 

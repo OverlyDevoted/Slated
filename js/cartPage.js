@@ -15,18 +15,18 @@ const purchase = async () => {
         const putRes = await Promise.all(putPromises);
         localStorage.removeItem("cart");
         cartContainer.innerHTML = "Successful purchase"
-        setTimeout(() => {
-            const aBack = document.createElement("a")
-            aBack.href = "./../";
-            aBack.click();
-        }, 3000);
+        // setTimeout(() => {
+        //     const aBack = document.createElement("a")
+        //     aBack.href = "./../";
+        //     aBack.click();
+        // }, 3000);
 
-        console.log(putRes)
 
         for (let item of putRes) {
             const count = item.count.reduce((accum, cur) => accum + Math.max(cur, 0), 0)
+           
             if (count <= 0) {
-                getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${item.collection}/product/${item.product}`, "DELETE");
+                getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${item.collectionId}/product/${item.id}`, "DELETE");
             }
         }
     }
@@ -66,7 +66,6 @@ const setupPage = () => {
         purchase();
     })
     const createRow = (item) => {
-        console.log(item)
         const tr = document.createElement("tr");
 
         const imgTd = document.createElement("td");

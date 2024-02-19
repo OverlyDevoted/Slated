@@ -23,7 +23,6 @@ collections.forEach((collection, idx) => {
         window.location.assign(`./products/?category=${id}`)
     })
     collectionEl.addEventListener("pointerover", () => {
-        console.log("enters")
         imgContainer.classList.add("zoom")
     })
 

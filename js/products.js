@@ -67,10 +67,8 @@ if (idxs.length) {
 }
 
 const products = [];
-// console.log(collections)
 for (let { id } of collections) {
     const data = await getData(`https://65c5cde5e5b94dfca2e05138.mockapi.io/api/collection/${id}/product`);
-    console.log(data);
     products.push(...data);
 }
 products.sort((a, b) => a.price - b.price);
