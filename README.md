@@ -1,6 +1,6 @@
 # Slated - clothing brand concept website
 
-This is a repository for a JavaScript module finish assignment project from my front-end course. The assignment was to create a CRUD application for an e-commerce website. The resulting project was created in a span of a week.
+This is final JavaScript module project for my front-end course. The assignment was to create a CRUD application for an e-commerce business without a backend. The resulting project was created in a span of a week.
 
 ## Main requirements
 
